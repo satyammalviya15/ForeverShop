@@ -45,7 +45,7 @@ const ShopContextProvider = (props) => {
         { itemId: product, size ,quantity:1}, // <-- send only ID
         { headers: { token } }
       );
-      getUserCart(token); // refresh cart from backend
+      // getUserCart(token); // refresh cart from backend
     } catch (error) {
       console.log(error);
       toast.error(error.response?.data?.message || "Failed to add item to cart");
@@ -100,7 +100,7 @@ const ShopContextProvider = (props) => {
         { headers: { token } }
       );
       // Optional: refresh cart to stay consistent
-      // getUserCart(token);
+      getUserCart(token);
     } catch (error) {
       console.error(error);
       toast.error(error.response?.data?.message || "Failed to update cart item");
