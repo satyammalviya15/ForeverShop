@@ -100,7 +100,7 @@ const ShopContextProvider = (props) => {
         { headers: { token } }
       );
       // Optional: refresh cart to stay consistent
-      getUserCart(token);
+      // getUserCart(token);
     } catch (error) {
       console.error(error);
       toast.error(error.response?.data?.message || "Failed to update cart item");
