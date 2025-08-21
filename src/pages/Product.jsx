@@ -39,9 +39,15 @@ const Product = () => {
     }
   };
 
+  // Fetch product whenever productId or product list changes
   useEffect(() => {
     fetchProductData();
   }, [productId, products]);
+
+  // Scroll to top whenever productId changes
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, [productId]);
 
   if (!productData) return <div className="opacity-0">Loading...</div>;
 
