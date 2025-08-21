@@ -13,22 +13,11 @@ const CartItemInput = ({ productId, size, quantity, updateQuantity }) => {
     setLocalQty(quantity);
   }, [quantity]);
 
+  // Debounce backend update for 1 second
   useEffect(() => {
-    let timer;
-
-    if (!localQty) {
-      // If empty, set default 1 after 5 seconds
-      timer = setTimeout(() => {
-        setLocalQty(1);
-        updateQuantity(productId, size, 1);
-      }, 5000);
-    } else {
-      // Debounce update to backend for 1 second
-      timer = setTimeout(() => {
-        updateQuantity(productId, size, Number(localQty));
-      }, 1000);
-    }
-
+    const timer = setTimeout(() => {
+      updateQuantity(productId, size, localQty || 1);
+    }, 1000);
     return () => clearTimeout(timer);
   }, [localQty]);
 
@@ -38,8 +27,10 @@ const CartItemInput = ({ productId, size, quantity, updateQuantity }) => {
       min={1}
       max={50}
       value={localQty}
-      onChange={(e) => setLocalQty(e.target.value)}
-      className="border max-w-10 sm:max-w-20 px-1 sm:px-2 py-1"
+      onChange={(e) =>
+        setLocalQty(Math.max(1, Math.min(50, Number(e.target.value))) || 1)
+      }
+      className="border w-12 sm:w-20 px-1 sm:px-2 py-1 text-center"
     />
   );
 };
@@ -55,7 +46,11 @@ const Cart = () => {
 
       {cartItems.length === 0 ? (
         <div className="text-center my-20">
-          <img className="w-32 mx-auto mb-6 opacity-70" src={assets.about_img} alt="Empty Cart"/>
+          <img
+            className="w-32 mx-auto mb-6 opacity-70"
+            src={assets.about_img}
+            alt="Empty Cart"
+          />
           <p className="text-lg font-medium text-gray-600">Your cart is empty</p>
           <button
             onClick={() => navigate("/")}
@@ -73,12 +68,23 @@ const Cart = () => {
                 className="py-4 border-t text-gray-700 grid grid-cols-[4fr_0.5fr_0.5fr] sm:grid-cols-[4fr_2fr_0.5fr] items-center gap-4"
               >
                 <div className="flex items-start gap-6">
-                  <img className="w-16 sm:w-20" src={item.product.image?.[0]} alt={item.product.name}/>
+                  <img
+                    className="w-16 sm:w-20"
+                    src={item.product.image?.[0]}
+                    alt={item.product.name}
+                  />
                   <div>
-                    <p className="text-xs sm:text-lg font-medium">{item.product.name}</p>
+                    <p className="text-xs sm:text-lg font-medium">
+                      {item.product.name}
+                    </p>
                     <div className="flex items-center gap-5 mt-2">
-                      <p>{currency}{item.product.price}</p>
-                      <p className="px-2 sm:px-3 sm:py-1 border-white bg-slate-100">{item.size}</p>
+                      <p>
+                        {currency}
+                        {item.product.price}
+                      </p>
+                      <p className="px-2 sm:px-3 sm:py-1 border-white bg-slate-100">
+                        {item.size}
+                      </p>
                     </div>
                   </div>
                 </div>
