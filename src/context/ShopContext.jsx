@@ -47,7 +47,7 @@ const ShopContextProvider = (props) => {
       );
       getUserCart(token); // refresh cart from backend
     } catch (error) {
-      console.log(error);
+      // console.log(error);
       toast.error(error.response?.data?.message || "Failed to add item to cart");
     }
   }
@@ -102,8 +102,8 @@ const ShopContextProvider = (props) => {
       // Optional: refresh cart to stay consistent
       getUserCart(token);
     } catch (error) {
-      console.error(error);
-      toast.error(error.response?.data?.message || "Failed to update cart item");
+      // console.error(error);
+      // toast.error(error.response?.data?.message || "Failed to update cart item");
     }
   }
 };
@@ -128,7 +128,7 @@ const ShopContextProvider = (props) => {
         toast.error(response.data.message);
       }
     } catch (error) {
-      console.log(error);
+      // console.log(error);
       toast.error(error.message);
     }
   };
