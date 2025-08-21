@@ -57,7 +57,9 @@ const Profile = () => {
 
   return (
     <div className="max-w-2xl mx-auto p-4 sm:p-6 space-y-6">
-      <Title text1="My" text2="Profile" />
+      <div className="text-2xl">
+        <Title text1={"MY"} text2={"PROFILE"} />
+      </div>
       {loading ? (
         <div className="text-gray-500">Loading profile...</div>
       ) : !user ? (
