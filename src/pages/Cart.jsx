@@ -9,9 +9,9 @@ const CartItemInput = ({ productId, size, quantity, updateQuantity }) => {
   const [localQty, setLocalQty] = useState(quantity);
 
   // Keep local input in sync if quantity changes externally
-  useEffect(() => {
-    setLocalQty(quantity);
-  }, [quantity]);
+  // useEffect(() => {
+  //   setLocalQty(quantity);
+  // }, [quantity]);
 
   // Debounce backend update for 1 second
   useEffect(() => {
