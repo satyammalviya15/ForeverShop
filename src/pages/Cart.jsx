@@ -13,13 +13,37 @@ const CartItemInput = ({ productId, size, quantity, updateQuantity }) => {
     setLocalQty(quantity);
   }, [quantity]);
 
-  // Debounce backend update for 1 second
+  // Debounce backend update for 5 seconds
   useEffect(() => {
     const timer = setTimeout(() => {
-      updateQuantity(productId, size, localQty || 1);
+      const finalQty = Number(localQty);
+      // send only if valid number, else default to 1
+      updateQuantity(productId, size, isNaN(finalQty) || finalQty < 1 ? 1 : finalQty);
     }, 5000);
     return () => clearTimeout(timer);
   }, [localQty]);
+
+  const handleChange = (e) => {
+    const val = e.target.value;
+
+    // Allow empty string so user can type freely
+    if (val === "") {
+      setLocalQty("");
+      return;
+    }
+
+    // If valid number, clamp between 1 and 50
+    const num = Math.max(1, Math.min(50, Number(val)));
+    setLocalQty(num);
+  };
+
+  const handleBlur = () => {
+    // When leaving input, ensure valid quantity
+    let num = Number(localQty);
+    if (isNaN(num) || num < 1) num = 1;
+    if (num > 50) num = 50;
+    setLocalQty(num);
+  };
 
   return (
     <input
@@ -27,9 +51,8 @@ const CartItemInput = ({ productId, size, quantity, updateQuantity }) => {
       min={1}
       max={50}
       value={localQty}
-      onChange={(e) =>
-        setLocalQty(Math.max(1, Math.min(50, Number(e.target.value))) || 1)
-      }
+      onChange={handleChange}
+      onBlur={handleBlur}
       className="border w-12 sm:w-20 px-1 sm:px-2 py-1 text-center"
     />
   );
