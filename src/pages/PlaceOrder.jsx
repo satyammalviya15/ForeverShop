@@ -108,7 +108,7 @@ const PlaceOrder = () => {
           }
           toast.success("Order placed successfully!");
           setCartItems({});
-          // window.location.href = "/orders";
+          window.location.href = "/orders";
         }
       } else {
         toast.error(response.data.message || "Failed to place order.");
