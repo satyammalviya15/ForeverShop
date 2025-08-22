@@ -19,7 +19,7 @@ const CartItemInput = ({ productId, size, quantity, updateQuantity }) => {
       const finalQty = Number(localQty);
       // send only if valid number, else default to 1
       updateQuantity(productId, size, isNaN(finalQty) || finalQty < 1 ? 1 : finalQty);
-    }, 5000);
+    }, 3000);
     return () => clearTimeout(timer);
   }, [localQty]);
 
