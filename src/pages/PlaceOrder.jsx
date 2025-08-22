@@ -35,6 +35,33 @@ const PlaceOrder = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
+  const initPay =(order)=>{
+    const options ={
+      key:import.meta.env.VITE_RAZORPAY_KEY_ID,
+      amount: order.amount,
+      currency:order.currency,
+      name:"Order Payment",
+      description:"Order Payment",
+      order_id:order.id,
+      receipt:order.receipt,
+      handler:async(response)=>{
+        console.log(response)
+        try {
+          const {data} = await axios.post(backendUrl+'/api/order/verifyrazorpay',response,{headers:{token}})
+          if(data.success){
+            navigate('/orders')
+            setCartItems({})
+          }
+        } catch (error) {
+          console.log(error)
+          toast.error(error)
+        }
+      }
+    }
+    const rzp = new window.Razorpay(options)
+    rzp.open()
+  }
+
   const handlePlaceOrder = async () => {
     if (!formData.firstName || !formData.email || !formData.phone) {
       toast.error("Please fill required fields: First Name, Email, Phone.");
@@ -74,9 +101,14 @@ const PlaceOrder = () => {
         if (method === "stripe") {
           window.location.replace(response.data.session_url);
         } else {
+          if (method === "razorpay") {
+            // console.log(response.data.order);
+            // console.log(import.meta.env.RAZORPAY_KEY_ID)
+            initPay(response.data.order);
+          }
           toast.success("Order placed successfully!");
           setCartItems({});
-          window.location.href = "/orders";
+          // window.location.href = "/orders";
         }
       } else {
         toast.error(response.data.message || "Failed to place order.");
@@ -202,7 +234,11 @@ const PlaceOrder = () => {
                   method === "razorpay" ? "bg-green-400" : ""
                 }`}
               ></p>
-              <img className="h-5 mx-4" src={assets.razorpay_logo} alt="Razorpay" />
+              <img
+                className="h-5 mx-4"
+                src={assets.razorpay_logo}
+                alt="Razorpay"
+              />
             </div>
             <div
               onClick={() => setMethod("cod")}
