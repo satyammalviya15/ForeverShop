@@ -17,7 +17,7 @@ const CartItemInput = ({ productId, size, quantity, updateQuantity }) => {
   useEffect(() => {
     const timer = setTimeout(() => {
       updateQuantity(productId, size, localQty || 1);
-    }, 1000);
+    }, 5000);
     return () => clearTimeout(timer);
   }, [localQty]);
 
