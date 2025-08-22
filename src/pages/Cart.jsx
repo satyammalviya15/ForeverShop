@@ -13,13 +13,13 @@ const CartItemInput = ({ productId, size, quantity, updateQuantity }) => {
     setLocalQty(quantity);
   }, [quantity]);
 
-  // Debounce backend update for 5 seconds
+  // Debounce backend update for 2 seconds
   useEffect(() => {
     const timer = setTimeout(() => {
       const finalQty = Number(localQty);
       // send only if valid number, else default to 1
       updateQuantity(productId, size, isNaN(finalQty) || finalQty < 1 ? 1 : finalQty);
-    }, 3000);
+    }, 2000);
     return () => clearTimeout(timer);
   }, [localQty]);
 
