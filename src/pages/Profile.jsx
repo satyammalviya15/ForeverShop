@@ -90,16 +90,14 @@ const Profile = () => {
             <span className="font-medium">Last Updated:</span>
             <p>{new Date(user.updatedAt).toLocaleString()}</p>
           </div>
-
-          {/* Logout Button */}
+        </div>
+      )}
+      {/* Orders */}
+      <Orders />
+      {/* Logout Button */}
           <div className="flex flex-col gap-2 w-36 py-3 px-5 bg-gray-600 text-white rounded cursor-pointer hover:bg-gray-500">
             <p onClick={logout}>Logout</p>
           </div>
-        </div>
-      )}
-
-      {/* Orders */}
-      <Orders />
     </div>
   );
 };
