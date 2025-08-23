@@ -5,7 +5,7 @@ import OurPolicy from '../components/OurPolicy';
 import NewsletterBox from '../components/NewsletterBox';
 import Banner from '../components/Banner';
 
-const Home = () => {
+const HomePage = () => {
   return (
     <div>
       <Banner/>
@@ -18,4 +18,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default HomePage
