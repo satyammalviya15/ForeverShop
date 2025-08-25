@@ -8,7 +8,7 @@ import Banner from '../components/Banner';
 const HomePage = () => {
   return (
     <div>
-      {/* <Banner/> */}
+      <Banner/>
       <Hero/>
       <LatestCollection/>
       <BestSeller/>
