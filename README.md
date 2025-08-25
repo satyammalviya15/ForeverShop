@@ -8,8 +8,7 @@
 > [<img src="https://ziadoua.github.io/m3-Markdown-Badges/badges/MongoDB/mongodb2.svg">]()
 
 > ### Stats and Socials  
-> [<img src="https://drive.google.com/uc?export=view&id=18wa1yK7ZfT5D2Kok_6priQSlr2WBwnlo" width="200">]()
-> [<img src="https://m3-markdown-badges.vercel.app/issues/1/2/yourusername/forever-ecommerce">]()  
+> ![Logo](./src/assets/D1.png)
 
 ---
 
