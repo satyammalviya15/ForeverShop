@@ -3,7 +3,7 @@
 # Forever – E-Commerce App Backend
 ### A complete backend solution for your online store
 
-> [<img src="https://ziadoua.github.io/m3-Markdown-Badges/badges/Node/node1.svg">]()
+> [<img src="https://ziadoua.github.io/m3-Markdown-Badges/badges/NodeJS/nodejs2.svg">]()
 > [<img src="https://ziadoua.github.io/m3-Markdown-Badges/badges/Express/express2.svg">]()
 > [<img src="https://ziadoua.github.io/m3-Markdown-Badges/badges/MongoDB/mongodb2.svg">]()
 
