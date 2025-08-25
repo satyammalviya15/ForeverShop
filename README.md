@@ -1,12 +1,27 @@
-# React + Vite
+![](./screenshots/icon.png)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Forever – E-Commerce App Backend
+### A complete backend solution for your online store
 
-Currently, two official plugins are available:
+> [<img src="https://ziadoua.github.io/m3-Markdown-Badges/badges/NodeJS/nodejs2.svg">]()
+> [<img src="https://ziadoua.github.io/m3-Markdown-Badges/badges/Express/express2.svg">]()
+> [<img src="https://ziadoua.github.io/m3-Markdown-Badges/badges/MongoDB/mongodb2.svg">]()
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+> ### Stats and Socials  
+> [<img src="https://drive.google.com/uc?export=view&id=18wa1yK7ZfT5D2Kok_6priQSlr2WBwnlo" width="200">]()
+> [<img src="https://m3-markdown-badges.vercel.app/issues/1/2/yourusername/forever-ecommerce">]()  
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Get Started 🚀
+
+### Prerequisites
+- Node.js >= 18
+- MongoDB installed or Atlas cluster
+- Cloudinary, Razorpay, and Stripe accounts
+
+### Installation
+```bash
+git clone https://github.com/satyammalviya15/forever-ecommerce.git
+cd forever-ecommerce
+npm install
