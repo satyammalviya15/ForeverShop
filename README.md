@@ -13,9 +13,6 @@
 > ![Logo](./src/assets/screenshot/D8.png)
 > ![Logo](./src/assets/screenshot/D10.png)
 > ![Logo](./src/assets/screenshot/D11.png)
-> ![Logo](./src/assets/screenshot/M1.png)
-> ![Logo](./src/assets/screenshot/M2.png)
-> ![Logo](./src/assets/screenshot/M3.png)
 
 ---
 
