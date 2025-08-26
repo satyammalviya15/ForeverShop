@@ -1,21 +1,20 @@
-![](./src/assets/frontend_assets/logo.png)
+![](https://raw.githubusercontent.com/satyammalviya15/ForeverShop/main/src/assets/frontend_assets/logo.png)
 
 # Forever – E-Commerce App
 ### A complete solution for your online store
 
 ## Get Started 🚀
 
-> [<img src="https://ziadoua.github.io/m3-Markdown-Badges/badges/NodeJS/nodejs2.svg">]()
-> [<img src="https://ziadoua.github.io/m3-Markdown-Badges/badges/Express/express2.svg">]()
-> [<img src="https://ziadoua.github.io/m3-Markdown-Badges/badges/MongoDB/mongodb2.svg">]()
+> <img src="https://ziadoua.github.io/m3-Markdown-Badges/badges/NodeJS/nodejs2.svg">
+> <img src="https://ziadoua.github.io/m3-Markdown-Badges/badges/Express/express2.svg">
+> <img src="https://ziadoua.github.io/m3-Markdown-Badges/badges/MongoDB/mongodb2.svg">
 
 ## Screens
-https://github.com/satyammalviya15/ForeverShop/blob/main/src/assets/screenshot/D1.png
 > ![Logo](https://raw.githubusercontent.com/satyammalviya15/ForeverShop/main/src/assets/screenshot/D1.png)
-> ![Logo](https://raw.githubusercontent.com/satyammalviya15/Forever/main/src/assets/screenshot/D2.png)
-> ![Logo](https://raw.githubusercontent.com/satyammalviya15/Forever/main/src/assets/screenshot/D8.png)
-> ![Logo](https://raw.githubusercontent.com/satyammalviya15/Forever/main/src/assets/screenshot/D10.png)
-> ![Logo](https://raw.githubusercontent.com/satyammalviya15/Forever/main/src/assets/screenshot/D11.png)
+> ![Logo](https://raw.githubusercontent.com/satyammalviya15/ForeverShop/main/src/assets/screenshot/D2.png)
+> ![Logo](https://raw.githubusercontent.com/satyammalviya15/ForeverShop/main/src/assets/screenshot/D8.png)
+> ![Logo](https://raw.githubusercontent.com/satyammalviya15/ForeverShop/main/src/assets/screenshot/D10.png)
+> ![Logo](https://raw.githubusercontent.com/satyammalviya15/ForeverShop/main/src/assets/screenshot/D11.png)
 
 ## Features
 - **User Authentication** – Secure login and signup using JWT and bcrypt.
