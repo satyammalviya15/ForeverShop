@@ -10,11 +10,11 @@
 > [<img src="https://ziadoua.github.io/m3-Markdown-Badges/badges/MongoDB/mongodb2.svg">]()
 
 ## Screens
-> ![Logo](./src/assets/screenshot/D1.png)
-> ![Logo](./src/assets/screenshot/D2.png)
-> ![Logo](./src/assets/screenshot/D8.png)
-> ![Logo](./src/assets/screenshot/D10.png)
-> ![Logo](./src/assets/screenshot/D11.png)
+> ![Logo](https://raw.githubusercontent.com/satyammalviya15/Forever/main/src/assets/screenshot/D1.png)
+> ![Logo](https://raw.githubusercontent.com/satyammalviya15/Forever/main/src/assets/screenshot/D2.png)
+> ![Logo](https://raw.githubusercontent.com/satyammalviya15/Forever/main/src/assets/screenshot/D8.png)
+> ![Logo](https://raw.githubusercontent.com/satyammalviya15/Forever/main/src/assets/screenshot/D10.png)
+> ![Logo](https://raw.githubusercontent.com/satyammalviya15/Forever/main/src/assets/screenshot/D11.png)
 
 ## Features
 - **User Authentication** – Secure login and signup using JWT and bcrypt.
