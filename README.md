@@ -10,7 +10,8 @@
 > [<img src="https://ziadoua.github.io/m3-Markdown-Badges/badges/MongoDB/mongodb2.svg">]()
 
 ## Screens
-> ![Logo](https://raw.githubusercontent.com/satyammalviya15/Forever/main/src/assets/screenshot/D1.png)
+https://github.com/satyammalviya15/ForeverShop/blob/main/src/assets/screenshot/D1.png
+> ![Logo](https://raw.githubusercontent.com/satyammalviya15/ForeverShop/main/src/assets/screenshot/D1.png)
 > ![Logo](https://raw.githubusercontent.com/satyammalviya15/Forever/main/src/assets/screenshot/D2.png)
 > ![Logo](https://raw.githubusercontent.com/satyammalviya15/Forever/main/src/assets/screenshot/D8.png)
 > ![Logo](https://raw.githubusercontent.com/satyammalviya15/Forever/main/src/assets/screenshot/D10.png)
